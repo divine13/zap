@@ -1,13 +1,21 @@
 Zap::Application.routes.draw do
 
+  get "static_pages/index"
+  get "static_pages/about"
+  get "static_pages/contact_us"
   devise_for :users
   
 
    root 'static_pages#index'
 
-
+    put "admin/users/:user_id/permissions", to: 
+     'admin/permissions#update', as: 'update_user_permissions'
+     
    namespace :admin do
-      resources :users
+    root "base#index"
+      resources :users do 
+        resources :permissions
+      end
     end
     
     resources :posts do 

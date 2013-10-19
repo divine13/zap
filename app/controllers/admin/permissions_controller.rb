@@ -20,6 +20,6 @@ class Admin::PermissionsController < Admin::BaseController
 		@user = User.find(params[:user_id])
 	end
 	def update_params
-		params.require(:permissions)
+		params.require(:permissions).permit!
 	end
 end

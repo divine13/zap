@@ -45,12 +45,13 @@ class Admin::UsersController < Admin::BaseController
   		@user.destroy
   		flash[:success] = "user has been eliminated (deleted in other word)"
   		redirect_to admin_user_path
+    end
   end
 #-------------------private--------------------
 private 
 
   def user_params
-  params.require(:user).permit(:email, :password, :password_confirmation)
+  params.require(:user).permit(:email, :password, :password_confirmation, :admin)
   end
   def find_user
   	@user = User.find(params[:id])
