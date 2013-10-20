@@ -2,3 +2,13 @@
 Designer: <%= @post.designer %>
 More about this trend: <%= @post.about %>
 Contact details for this Trend: <%= @post.contact_details %>
+<hr>
+<h3>comments</h3>
+<div id="comments">
+	<% if @post.comments.exists? %> <co id="ch10_191_1" />
+	<%= render @post.comments.select(&:persisted?) %>
+	<% else  %>
+	There is no comments for this ticket
+	<% end -%>
+	<%= render 'comments/form' %>
+</div>
