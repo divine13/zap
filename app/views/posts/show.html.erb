@@ -1,6 +1,8 @@
 
 <%= provide(:title, "#{@post.designer}`s trend") %>
+<span class="image image-full">
 <%= image_tag @post.picture.url if @post.picture? %>
+  </span>
 <div id="detail">
 <div class="users">
 <li><strong>Designer:</strong> <%= @post.designer %> </li>
