@@ -2,7 +2,7 @@ module ApplicationHelper
 	
 	def full_title(title)
 		base_name = "Zap"
-		if(title.empty)
+		if(title.empty?)
 			base_name
 		else
 			"#{base_name} :: #{title}"

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails zap: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="f7eee093-36d0-49fa-8d8c-7291fcd6501a">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
+    <libraries>
+      <library>
+        <url>file://</url>
+      </library>
+    </libraries>
+  </data-source>
+  <data-source source="LOCAL" name="Rails zap: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="00e093dc-d649-47d6-b9c8-f1a3c49cedaa">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
+    <libraries>
+      <library>
+        <url>file://</url>
+      </library>
+    </libraries>
+  </data-source>
+</component>
