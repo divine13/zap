@@ -1,0 +1,14 @@
+<div class="users">
+<%= provide(:title, "all posts ") %>
+<h1>All posts</h1>
+
+<% @posts.each do |post| %>
+      <li>
+<%= link_to(post.about, post_path(post)) %>
+
+<% if current_user.admin?  %>
+<%# link_to("delete", destroy_post_path(post)) %>
+<% end -%>
+      </li>
+<% end %>
+</div>
