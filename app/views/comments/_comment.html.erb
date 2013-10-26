@@ -1,4 +1,4 @@
 <%= div_for(comment) do  %>
-<h4><%= comment.user %></h4>
-<%= simple_format(comment.text) %>
+<h4 class="one"><%= comment.user %></h4>
+<p class="two"><%= simple_format(comment.text) %></p>
 <% end -%>

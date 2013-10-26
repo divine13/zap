@@ -12,10 +12,11 @@
 </div>
 <h3>comments</h3>
 <div id="comment">
-	<% if @post.comments.exists? %> <co id="ch10_191_1" />
+	<% if @post.comments.exists? %> <co class="ch10_191_1" />
 	<%= render @post.comments.select(&:persisted?) %>
 	<% else  %>
 	There is no comments for this ticket
-	<% end -%>                                                                                                                     -
+	<% end -%>
+
 	<%= render 'comments/form' %>
 </div>
