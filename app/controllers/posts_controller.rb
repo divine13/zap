@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
-    before_filter :authenticate_user!, except: :show 
+    before_filter :authenticate_user!, except: [:show, :index]
 	#before_filter :find_user
 	before_filter :find_post, only: [:show, :edit, :update, :destroy]
   def index
-  	@posts = Post.all
+  	@posts = Post.paginate(page: params[:page])
   end
 
   def new

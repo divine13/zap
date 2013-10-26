@@ -1,7 +1,7 @@
 class Admin::UsersController < Admin::BaseController
 	before_filter :find_user, only: [:show, :edit, :update, :destroy]
   def index
-  	@users = User.all(order: :email)
+  	@users = User.all
   end
 
   def new
@@ -57,6 +57,6 @@ private
   	@user = User.find(params[:id])
   end
   def set_admin
-  	@user.admin = user_params[:admin] == "1"
+  	@user.admin = user_params[:admin] == '1'
   end
 end

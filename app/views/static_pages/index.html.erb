@@ -1,0 +1,20 @@
+<div >
+<h1>lebx and chubx's posts </h1>
+  <div class="users">
+
+    <% @post.each do |post| %>
+        <li>
+          <div class=about>
+             <%=link_to(post.about, post_path(post)) %>
+          </div>
+          <div class="ft">
+         Designed by: <%= post.designer %>
+              <div >
+                      Posted <%= time_ago_in_words(post.created_at) %> ago
+              </div>
+           <% end %>
+    </div>
+    </li>
+  </div>
+
+</div>
