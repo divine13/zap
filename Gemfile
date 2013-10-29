@@ -6,11 +6,12 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+
 gem 'devise'
 
- gem 'cancan'
+gem 'cancan'
 
-  gem 'will_paginate'
+gem 'will_paginate'
 
 gem 'paperclip'
 # Use SCSS for stylesheets
@@ -26,6 +27,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'bootstrap-sass'
+gem 'bootstrap-will_paginate'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

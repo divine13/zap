@@ -1,11 +1,11 @@
 <div >
 <h1>lebx and chubx's posts </h1>
   <div class="users">
-
+    <%= will_paginate(@post) %>
     <% @post.each do |post| %>
         <li>
           <div class=about>
-             <%=link_to(post.about, post_path(post)) %>
+             <%= link_to(post.about, post_path(post)) %>
           </div>
           <div class="ft">
          Designed by: <%= post.designer %>
@@ -14,9 +14,8 @@
               </div>
            <% end %>
     </div>
-    <div class = "ft">
     <%= will_paginate(@post) %>
-    </div>
+
     </li>
   </div>
 

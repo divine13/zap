@@ -2,6 +2,7 @@
 <div class="users">
 <%= provide(:title, "all posts ") %>
 <h1>All posts</h1>
+  <%= will_paginate(@post) %>
   <% admins_only do  %>
 <h4><%= link_to("new post", new_post_path ) %></h4>
       <% end %>
