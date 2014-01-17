@@ -19,6 +19,15 @@
         </library>
       </libraries>
     </data-source>
+    <data-source source="LOCAL" name="Rails zap: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="d96ecf80-dd9d-4dc6-9913-34958f05d96b">
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/production.sqlite3</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://</url>
+        </library>
+      </libraries>
+    </data-source>
   </component>
 </project>
 

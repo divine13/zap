@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
 		@comment = @post.comments.build(comment_params)
 		if @comment.save 
 			flash[:success] = "thank you for commenting"
-			redirect_to([ @post]) #change to comment if it does not work
+			redirect_to([@post]) 
 		else 
 			flash[:error] = "sorry could not comment"
 			render template: 'posts/show'
@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
 		end
 	end
 	def comment_params
-		prms = params.require(:comment).permit!
+		prms = params.require(:comment).permit(:text)
 		prms.merge!(user: current_user)
 	end
 	def find_post

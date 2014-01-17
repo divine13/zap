@@ -41,7 +41,7 @@ class PostsController < ApplicationController
 
   def destroy 
   	@post.destroy 
-  	flash[:success] = "post has been eliminated"
+  	flash[:success] = "post has been deleted"
   end
 #--------------------private-----------------------
   def post_params
